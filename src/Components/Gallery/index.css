@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #1E1E1F;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Header Section */
+  .container_projects_part_1_gallery {
+    margin-top:12vh;
+    background-image: url("../assets/Gallery/breadCrumbs_bg.jpg");
+    min-height: 50vh;
+    background-position: center calc(100% - -100px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 150px;
+  }
+  
+  .BreadCrmbs_header {
+    font-size: 56px;
+    font-weight: 700;
+  }
+  
+  .BreadCrumbs_para {
+    font-size: 16px;
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  
+  .BreadCrumbs_para span {
+    transform: rotate(90deg);
+    font-size: 18px;
+  }
+  
+  /* Gallery Body */
+  .gallery_body_part {
+    background-color: #1E1E1F;
+    padding: 100px 200px;
+  }
+  
+  .Heading_gallery_bodypart {
+    font-size: 42px;
+  }
+  
+  .Heading_gallery_bodypart span {
+    font-weight: 100;
+    font-size: 30px;
+    color: rgb(255, 32, 32);
+  }
+  
+  .card_gallery_category {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    outline: 1px solid rgba(128, 128, 128, 0.179);
+    box-shadow: 0px 0px 30px rgba(151, 151, 151, 0.345);
+    margin: 50px 0;
+    border-radius: 10px;
+    padding: 14px;
+  }
+  
+  .heading_gallery_card {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(214, 214, 214);
+  }
+  
+  .para_gallery_card {
+    font-size: 13px;
+    color: rgb(175, 175, 175);
+    line-height: 25px;
+  }
+  
+  .image_gallery_img_main {
+    height: 260px;
+    border-radius: 6px;
+  }
+  
+  /* Button */
+  .discover_moreButton_home {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1.25rem;
+    background-color: transparent;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 10px;
+    font-weight: bold;
+    border: 1px solid rgba(125, 125, 125, 0.212);
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .fa-eye {
+    color: rgba(253, 253, 253, 0.9);
+  }
+  
+  .discover_moreButton_home:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .discover_moreButton_home:hover::before {
+    animation: shine_button 1.5s ease-out infinite;
+  }
+  
+  .discover_moreButton_home::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine_button {
+    0% {
+      left: -100px;
+    }
+    60% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  /* Modal */
+  .modal-header {
+    background-color: #000;
+  }
+  
+  .modal-title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .modal-content {
+    background-color: #0d0d0d;
+  }
+  
+  .close {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .modal-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .kitchen_img_gal {
+    width: 31%;
+    margin: 6px;
+  }
+  
+  .shortImg_modal {
+    width: 64%;
+  }
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 660px) {
+    body {
+      font-size: 12px;
+    }
+  
+    .container_projects_part_1_gallery {
+      min-height: 25vh;
+      padding: 10px 30px;
+    }
+  
+    .BreadCrmbs_header {
+      font-size: 30px;
+    }
+  
+    .BreadCrumbs_para {
+      font-size: 12px;
+    }
+  
+    .BreadCrumbs_para span {
+      font-size: 14px;
+    }
+  
+    .gallery_body_part {
+      padding: 20px 10px;
+    }
+  
+    .Heading_gallery_bodypart {
+      font-size: 20px;
+    }
+  
+    .Heading_gallery_bodypart span {
+      font-size: 16px;
+    }
+  
+    .card_gallery_category {
+      flex-direction: column;
+      gap: 5px;
+      margin: 30px 0;
+      border-radius: 3px;
+      padding: 10px;
+    }
+  
+    .heading_gallery_card {
+      font-size: 14px;
+    }
+  
+    .para_gallery_card {
+      font-size: 7px;
+      line-height: 8px;
+      text-align: justify;
+    }
+  
+    .image_gallery_img_main {
+      height: 130px;
+      border-radius: 2px;
+    }
+  
+    .discover_moreButton_home {
+      font-size: 6px;
+      gap: 5px;
+      padding: 0.5rem;
+    }
+  
+    .modal-title {
+      font-size: 14px;
+    }
+  
+    .kitchen_img_gal {
+      width: 100%;
+    }
+  
+    .shortImg_modal {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,35 @@
+.navbar{
+    width:100vw;
+    background-image:linear-gradient(to bottom,black,rgba(0, 0, 0, 0.522));
+    position: fixed;
+    z-index:2;
+    max-height:9vh;
+top: 0;
+left: 0;
+
+}
+
+.bk_appoint_butn_home_nav{
+    display: flex;
+    flex-direction: row ;
+    align-items:center;
+    justify-content: center;
+}
+.fa-phone-alt{
+    font-size:22px !important;
+    margin-top:1px!important;
+}
+.link_brand_logo{
+    all: unset;
+  }
+.link_brand_logo:hover{
+    all: unset;
+    cursor: pointer;
+  }
+.heading_navbar{
+    margin-left:15px;
+}
+.bk_appoint_butn_home_nav{
+    font-size:14px;
+    padding:10px 10px;
+}

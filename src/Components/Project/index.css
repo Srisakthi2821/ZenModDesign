@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+.linkName{
+    all: unset;
+    color:white;
+}
+.linkName:hover{
+    color:rgb(255, 10, 10);
+    cursor: pointer;
+    text-decoration: wavy;
+}
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #1E1E1F;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Header Section */
+  .container_projects_part_1_projects {
+    margin-top:12vh;
+    background-image: url("../assets/Projects/part1_bg.jpg");
+    min-height: 50vh;
+    background-position: center calc(100% - -300px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 150px;
+  }
+  
+  .BreadCrmbs_header {
+    font-size: 56px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .BreadCrumbs_para {
+    font-size: 16px;
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #fff!important;
+  }
+  
+  .BreadCrumbs_para span {
+    transform: rotate(90deg);
+    font-size: 18px;
+  }
+  
+  /* Body Section */
+  .container_bodyPart_projects {
+    background-color: #1E1E1F;
+    padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  .containerColl3dCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+  }
+  .project_body_para{
+    font-size:18px;
+    color:white;
+  }
+  .container_writtens_project {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    gap: 20px;
+  }
+  
+  .project_body_headingMain {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .project_body_headingMain span {
+    color: rgb(255, 10, 10);
+    font-size: 18px;
+    font-weight: 100;
+  }
+  
+
+  /*************************project plans************************/
+  .ProjectPlansContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  /* Card Base Style */
+  .uniqueCard {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    background: mediumturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden; /* Important */
+  }
+  
+  /* Pseudo Elements */
+  .uniqueCard::before,
+  .uniqueCard::after {
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 10%;
+    background-color: #162039d8;
+    border:1px solid rgba(255, 255, 255, 0.205);
+    transition: all 0.5s;
+    z-index: 0;
+  }
+  
+  .uniqueCard::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+  
+  .uniqueCard::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+  }
+  
+  /* On Hover, expand */
+  .uniqueCard:hover::before,
+  .uniqueCard:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+  
+  /* Show text inside AFTER on hover */
+  .uniqueCard:hover::after {
+    content: "View In 3D 🎲";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow:5px 5px 10px black,10px 10px 10px black,10px 10px 10px black;
+  }
+  #uniqueCard1{
+    background-image:url('../assets/3d/kitchen3dImage1.png');
+    background-size: cover;
+    background-position: center;
+  }
+  #uniqueCard2{
+    background-image:url('../assets/3d/kitchen3dImage2.png');
+    background-size: cover;
+    background-position: center;
+  }
+  #uniqueCard3{
+    background-image:url('../assets/3d/kitchen3dImage3.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #uniqueCard4{
+    background-image:url('../assets/3d/Bedroom3dImage1.png');
+    background-size: cover;
+    background-position: center;
+  }
+  #uniqueCard5{
+    background-image:url('../assets/3d/bedroom3dImage2.png');
+    background-size: cover;
+    background-position: center;
+  }
+  #uniqueCard6{
+    background-image:url('../assets/3d/bedroom3dImage3.png');
+    background-size: cover;
+    background-position: center;
+  }
+  #uniqueCard7{
+     background-image:url('../assets/3d/LivingRoom1.png');
+    background-size: cover;
+    background-position: center;
+
+  }
+   #uniqueCard8{
+     background-image:url('../assets/3d/LivingRoom2.png');
+    background-size: cover;
+    background-position: center;
+  }
+  #uniqueCard9{
+     background-image:url('../assets/3d/LivingRoom3.png');
+    background-size: cover;
+    background-position: center;
+  }
+ 
+  /* Button inside card */
+  .viewButton {
+    opacity: 0;
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+    padding: 5px 20px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    z-index: 2; /* Above background */
+    transition: opacity 0.3s ease;
+  }
+  
+  .viewButton:hover{
+    background-color:black;
+    color:white;
+    border: 1px solid white;
+  }
+  /* Show button only on hover */
+  .uniqueCard:hover .viewButton{
+    opacity: 1;
+  }
+  .uniqueCard:hover .rotatingCube{
+    opacity:1;
+  }
+
+  .imagePinchCursor{
+    position: absolute;
+    top:10%;
+    left:1%;
+    z-index: 5;
+  }
+  .imagePinchCursor img{
+    height:100px;
+  }
+  .imagePinchCursor p{
+    color:white;
+    font-size:15px;
+  }
+  .minimodelAnimation{
+    position: relative;
+    top:0px;
+    right:0px;
+  }

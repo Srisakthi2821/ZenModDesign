@@ -1,0 +1,8 @@
+.buttonKnowMore3d{
+    color:white;
+    border-radius:5px;
+    position: absolute;
+    margin-top:85vh;
+    margin-left: 45vw;
+    z-index: 5;
+}

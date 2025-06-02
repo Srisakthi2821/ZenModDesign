@@ -1,0 +1,384 @@
+/* Reset styles */
+.reset *,
+.reset *::before,
+.reset *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./bg-login.jpg');
+  background-size: cover;
+}
+
+/* Body styling */
+.body-background {
+}
+
+/* Background Shapes */
+.background-container {
+  width: 500px;
+  height: 320px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 52%;
+}
+
+.background-container .background-shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.background-shape-first {
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -80px;
+  top: -80px;
+  box-shadow: 0px 0px 20px rgba(18, 166, 246, 0.4), 0px 0px 40px 10px rgba(18, 166, 246, 0.238);
+}
+
+.background-shape-second {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  box-shadow: 0px 0px 20px #f0961998, 0px 0px 40px 10px #f0961965;
+  right: -30px;
+  bottom: -80px;
+}
+
+/* Form */
+.login-form {
+  height: fit-content;
+  width: 400px;
+  background-color: rgba(92, 91, 91, 0.262);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+/* Form Elements */
+.login-form * {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+.login-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+.input-label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.input-field {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 320;
+}
+
+.input-field:focus-within {
+  color: black;
+  background-color: rgba(202, 202, 202, 0.638);
+}
+
+.input-placeholder::placeholder {
+  color: #e5e5e5;
+}
+
+/* Button */
+.login-button {
+  background: rgba(29, 110, 205, 1);
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin: 20px 0px;
+  align-self: center;
+  border: none;
+}
+
+.login-button:hover {
+  background-color: #ee9318;
+  color: black;
+  box-shadow: 0px 0px 50px -10px #ee9318;
+
+}
+
+/* Error message */
+.error-message {
+  font-size: 14px;
+  color: rgb(223, 16, 16);
+  margin: 10px 10px;
+  font-weight:900;
+  text-shadow: 0px 0px 20px rgb(5, 0, 0);
+}
+
+/* Date picker */
+.date-input {
+  cursor: pointer;
+}
+
+/* Shining text */
+.text-shine {
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, #585858 0, #d3d2d2 10%, #060404 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3.5s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 30px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.612);
+}
+
+/* Shine animation */
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 100px;
+  }
+  100% {
+    background-position: 280px;
+  }
+}
+
+/* Results Container */
+.warrantyChecking-results-container {
+  width: 100vw;
+  padding-top: 12vh;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Ensure absolute positioning works relative to this container */
+}
+
+/* Circular Progress Bar Container */
+.warrantyChecking-containerWarrantyCheckShow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* User Card Styling */
+.warrantyChecking-user-card {
+  width: 600px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ffffffde, #e6e6e6d1);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: warrantyChecking-slideIn 0.5s ease-out;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.warrantyChecking-user-card:hover {
+  transform: translateY(-5px);
+}
+
+.warrantyChecking-user-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  border-radius: 17px;
+}
+
+.warrantyChecking-user-card-avatar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1d6ecd;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.warrantyChecking-verified-badge {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #28a745;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.warrantyChecking-user-card-title {
+  color: #1d6ecd;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.warrantyChecking-user-card-content {
+  text-align: left;
+}
+
+.warrantyChecking-user-card-content p {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.warrantyChecking-user-card-label {
+  font-weight: bold;
+  color: #1d6ecd;
+}
+
+.warrantyChecking-icon {
+  color: #1d6ecd;
+}
+
+/* Purchases Styling */
+.warrantyChecking-purchases-container {
+  margin-top: 0px;
+  width: 600px;
+  z-index: 8;
+  margin-top: 6px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ffffffde, #e6e6e6d1);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: warrantyChecking-slideIn 0.5s ease-out;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.warrantyChecking-purchases-title {
+  color: #1d6ecd;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.warrantyChecking-purchases-list {
+  list-style: none;
+  padding: 0;
+}
+
+.warrantyChecking-purchase-item {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.warrantyChecking-purchase-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.warrantyChecking-purchase-item p {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.warrantyChecking-purchase-label {
+  font-weight: bold;
+  color: #1d6ecd;
+}
+
+/* Back Button */
+.warrantyChecking-login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1d6ecd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.warrantyChecking-login-button:hover {
+  background-color: #155a9b;
+}
+.containerWarrentyCircleContainer{
+    background-color:black;
+    border-radius:50%;
+    position: absolute;
+    top:5vh;
+    width:140px;
+    right: 2vh;
+    padding:10px;
+}
+.warrantyChecking-back-button {
+  width: auto;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+/* Animation */
+@keyframes warrantyChecking-slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

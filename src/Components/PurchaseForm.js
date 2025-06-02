@@ -13,7 +13,7 @@ const PurchaseForm = ({ userId, onPurchaseCreated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/purchases', formData);
+      const res = await axios.post('https://zenmodapi.onrender.com/api/purchases', formData);
       setMessage('Purchase created successfully!');
       console.log('Purchase created:', res.data);
       setFormData({ ...formData, productName: '', purchaseDate: '', warrantyPeriod: '' });

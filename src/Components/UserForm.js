@@ -28,7 +28,7 @@ const UserForm = ({ setUserId, onUserCreated }) => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/users', formData);
+      const res = await axios.post('https://zenmodapi.onrender.com/api/users', formData);
       console.log('User created:', res.data);
       if (!res.data.userId) {
         setError('Failed to retrieve userId from server.');

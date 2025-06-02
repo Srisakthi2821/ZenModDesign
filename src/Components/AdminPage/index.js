@@ -43,13 +43,13 @@ class AdminPage extends Component {
     if (this.state.userId !== prevState.userId && this.state.userId) {
       // Fetch user details
       axios
-        .get(`http://localhost:5000/api/users/${this.state.userId}`)
+        .get(`https://zenmodapi.onrender.com/api/users/${this.state.userId}`)
         .then((res) => this.setState({ user: res.data }))
         .catch((err) => console.error(err));
 
       // Fetch purchases
       axios
-        .get(`http://localhost:5000/api/purchases/${this.state.userId}`)
+        .get(`https://zenmodapi.onrender.com/api/purchases/${this.state.userId}`)
         .then((res) => this.setState({ purchases: res.data }))
         .catch((err) => console.error(err));
     }
@@ -68,7 +68,7 @@ class AdminPage extends Component {
     // Fetch updated purchases after creation
     if (this.state.userId) {
       axios
-        .get(`http://localhost:5000/api/purchases/${this.state.userId}`)
+        .get(`https://zenmodapi.onrender.com/api/purchases/${this.state.userId}`)
         .then((res) => this.setState({ purchases: res.data }))
         .catch((err) => console.error(err));
     }

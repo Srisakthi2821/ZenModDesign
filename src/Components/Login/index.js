@@ -60,13 +60,13 @@ const Login = () => {
 
     try {
       const userResponse = await axios.get(
-        `http://localhost:5000/api/users/${formData.userId}`
+        `https://zenmodapi.onrender.com/api/users/${formData.userId}`
       );
       const fetchedUser = userResponse.data;
       setUser(fetchedUser);
 
       const purchasesResponse = await axios.get(
-        `http://localhost:5000/api/purchases/${formData.userId}`
+        `https://zenmodapi.onrender.com/api/purchases/${formData.userId}`
       );
       const allPurchases = purchasesResponse.data;
 
